@@ -356,6 +356,75 @@
     }
 }
 
+.video-fashion {
+    background-color: $bg;
+    background-image: url('../images/decor/pattern.svg');
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    padding: 125px 0;
+
+    // .video-fashion__inner
+
+    &__inner {
+        display: flex;
+    }
+
+    // .video-fashion__popup
+
+    &__popup {
+        margin-right: 60px;
+        max-width: 535px;
+        height: 480px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    // .video-fashion__play
+
+    &__play {}
+
+    // .video-fashion__content
+
+    &__content {
+        max-width: 570px;
+    }
+
+    // .video-fashion__subtitle
+
+    &__subtitle {
+        padding-top: 75px;
+        font-size: 22px;
+        color: $accent;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    // .video-fashion__title
+
+    &__title {
+        text-align: left;
+        margin-bottom: 35px;
+    }
+
+    // .video-fashion__text
+
+    &__text {
+        margin-bottom: 55px;
+    }
+
+    // .video-fashion__link
+
+    &__link {
+        @extend %btn;
+    }
+}
+
 .footer {
     background-color: $bg;
 }
