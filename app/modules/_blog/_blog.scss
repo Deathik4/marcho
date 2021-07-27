@@ -1,0 +1,126 @@
+.blog {
+    padding: 50px 0 160px;
+    background-image: url('../images/blog-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    // .blog__items
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: -25px;
+            background-image: url('../images/decor/blog-decor.svg');
+            width: 126px;
+            height: 53px;
+            z-index: -1;
+        }
+    }
+
+    // .blog__item
+
+    &__item {
+        max-width: 370px;
+
+        &:hover {
+            border: 1px solid #e8e8e8;
+            box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+
+            .blog__item-link {
+                color: $accent;
+
+                &::after {
+                    background-image: url('../images/icons/arrow-accent.svg');
+                }
+            }
+        }
+    }
+
+    // .blog__item-imglink
+
+    &__item-imglink {
+        display: inline-block;
+
+        img {
+            height: 288px;
+            object-fit: cover;
+        }
+    }
+
+    &__item-box {
+        padding: 30px 40px;
+    }
+
+    // .blog__item-titlelink
+
+    &__item-titlelink {}
+
+    // .blog__item-title
+
+    &__item-title {
+        color: $title;
+        @extend %roboto-400;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    // .blog__item-link
+
+    &__item-link {
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 10px;
+            height: 8px;
+            background-image: url('../images/icons/arrow.svg');
+            position: absolute;
+            right: -14px;
+            top: 8px;
+        }
+    }
+
+}
+
+.blog-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &__author,
+    &__date {
+        padding-left: 30px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 4px;
+        }
+    }
+
+    // .blog__item-author
+
+    &__author {
+        &::before {
+            background-image: url('../images/icons/user-grey.svg');
+        }
+    }
+
+    // .blog__item-date
+
+    &__date {
+        &::before {
+            background-image: url('../images/icons/time.svg');
+        }
+    }
+}
